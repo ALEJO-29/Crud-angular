@@ -1,0 +1,87 @@
+<div class="container  mx-auto mt-2">
+    <div class="card f w-75 mx-auto">
+        <div class="card-header shadow-lg">
+            <h2 class="text-center"><strong> Agrega un nuevo Equipo</strong></h2>
+            <div class="card-body">
+                <form action="" class="d-block mx-auto w-75 " #f="ngForm">
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">codigo equipo</label>
+                        <input type="number" name="codigo_equipo" id="codigo_equipo" class="form-control"
+                            [(ngModel)]="equipo.codigo_equipo" required>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="" class="text-uppercase">Disponibilidad</label>
+                        <select class="form-select text-uppercase" aria-label="Default select example"
+                            [(ngModel)]="equipo.disponibilidad" name="marca" required>
+                            <option selected>Disponible</option>
+                            <option value="Disponible">No Disponible</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">tiket</label>
+                        <input type="number" name="tiket" id="tiket" class="form-control" [(ngModel)]="equipo.tiket"
+                            required>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="" class="text-uppercase">Marca</label>
+                        <select class="form-select text-uppercase" aria-label="Default select example"
+                            [(ngModel)]="equipo.marca" name="marca" required>
+                            <option *ngFor="let item of marca">{{item}} </option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">procesador</label>
+                        <input type="text" name="procesador" id="procesador" class="form-control"
+                            [(ngModel)]="equipo.procesador">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="" class="text-uppercase">Sistema Operativo</label>
+                        <select class="form-select text-uppercase" aria-label="Default select example"
+                            [(ngModel)]="equipo.os" name="os">
+                            <option *ngFor="let item of os"> {{item}} </option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">ram</label>
+                        <input type="text" name="ram" id="ram" class="form-control" [(ngModel)]="equipo.ram">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">tipo disco</label>
+                        <input type="text" name="tipo_disco" id="tipo_disco" class="form-control"
+                            [(ngModel)]="equipo.tipo_disco">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">serial</label>
+                        <input type="text" name="seriall" id="seriall" class="form-control" [(ngModel)]="equipo.seriall"
+                            required>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">precio compra</label>
+                        <input type="number" name="precio_compra" id="precio_compra" class="form-control"
+                            [(ngModel)]="equipo.precio_compra" required>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">precio actual</label>
+                        <input type="number" name="precio_actual" id="precio_compra" class="form-control"
+                            [(ngModel)]="equipo.precio_actual" required>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">fecha factura</label>
+                        <input type="date" name="precio_actual" id="precio_actual" class="form-control"
+                            [(ngModel)]="equipo.fecha_factura" required ng>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="codigo_equipo" class="form-group text-uppercase">Observaciones</label>
+                        <textarea name="observaciones" id="observaciones" cols="20" rows="8" class="form-control"
+                            placeholder="observaciones" [(ngModel)]="equipo.observaciones" required></textarea>
+                    </div>
+                    <div class="form-group mb-2">
+                        <button mat-raised-button color="warn" class="d-block mx-auto" (click)="onCreateTeam()"
+                            [disabled]="f.invalid">Agregar Equipo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

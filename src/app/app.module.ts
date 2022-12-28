@@ -12,6 +12,16 @@ import { EditarProductosComponent } from './editar-productos/editar-productos.co
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {} from '@angular/material/icon';
+import { ListTeamsComponent } from './components/list-teams/list-teams.component';
+import { CreateTeamsComponent } from './components/create-teams/create-teams.component';
+import { UpdateTeamsComponent } from './components/update-teams/update-teams.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { CreateUserComponent } from './components/user/create-user/create-user.component';
+import { ListUserComponent } from './components/user/list-user/list-user.component';
+import { UpdateUserComponent } from './components/user/update-user/update-user.component';
 
 
 @NgModule({
@@ -20,6 +30,12 @@ import {} from '@angular/material/icon';
     ListarProductosComponent,
     CrearProductosComponent,
     EditarProductosComponent,
+    ListTeamsComponent,
+    CreateTeamsComponent,
+    UpdateTeamsComponent,
+    CreateUserComponent,
+    ListUserComponent,
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +45,11 @@ import {} from '@angular/material/icon';
     MatButtonModule,
     ToastrModule.forRoot(),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

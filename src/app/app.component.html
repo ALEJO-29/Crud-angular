@@ -1,16 +1,19 @@
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #222324;">
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #034e99fd;">
     <a class="navbar-brand mx-5" [routerLink]="['/']"><i class="fa-solid fa-table m-1"></i>Inventario</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav ms-auto mt-2 mt-lg-0 mx-5 p-3">
             <li class="nav-item">
-                <a class="nav-link active" [routerLink]="['/']"><i class="fa-solid fa-list-ul m-2"></i>Lista <span class="visually-hidden">(current)</span></a>
+                <a class="nav-link active m-2" aria-current="page" [routerLink]="['/']"><i class="fa-solid fa-chalkboard-user"></i>Productos<span
+                        class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/nuevo']"> <i class="fa-solid fa-plus m-2"></i>Agregar Producto</a>
+                <a class="nav-link m-2" [routerLink]="['/list']"><i class="fa-solid fa-laptop "></i>Equipos</a>
             </li>
         </ul>
     </div>
 </nav>
+
+
 <router-outlet></router-outlet>

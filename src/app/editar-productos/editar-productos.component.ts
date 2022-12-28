@@ -12,29 +12,37 @@ import { ProductoService } from '../service/producto.service';
 })
 export class EditarProductosComponent implements OnInit {
 
-  producto: Producto= new Producto();
-  id: number;
+  producto: Producto = new Producto();
+  id: any;
 
-  constructor(private productoService: ProductoService,
-    private titulo: Title, private toastr: ToastrService,
-    private roter: Router, private activate: ActivatedRoute) {
+  constructor(
+    private productoService: ProductoService,
+    private titulo: Title,
+    private toastr: ToastrService,
+    private router: Router,
+    private activate: ActivatedRoute) {
     titulo.setTitle('Editar productos')
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     const id = this.activate.snapshot.params['id'];
-    this.productoService.getById(this.id).subscribe(data => {
-      this.producto;
-    })
+    this.productoService.getById(id).subscribe(
+      data => {
+        this.producto = data;
+      }
+    );
   }
-
 
   onUpdate(): void {
     const id = this.activate.snapshot.params['id'];
-    this.productoService.update(id, this.producto).subscribe(data => {
-      this.toastr.success('producto actualizado', 'Ok', {
-        timeOut: 3000, positionClass: 'toast-top-center'
-      })
-    });
+    this.productoService.update(id, this.producto).subscribe(
+      data => {
+        this.toastr.success('Producto Actualizado', 'OK', {
+          timeOut: 3000, positionClass: 'toast-top-center'
+        });
+        this.router.navigate(['/']);
+      }
+    );
   }
+
 }

@@ -1,0 +1,51 @@
+<div class="container mb-4 mt-3 mx-1 w-75">
+    <a class="nav-link btn btn-success w-25 text-white" [routerLink]="['/new']">
+        <i class="fa-solid fa-plus m-2"></i>Agregar Producto</a>
+</div>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>codigo_equipo</th>
+                <th>disponibilidad</th>
+                <th>tiket</th>
+                <th>marca</th>
+                <th>procesador</th>
+                <th>os</th>
+                <th>ram</th>
+                <th>disco</th>
+                <th>serial</th>
+                <th>precio compra</th>
+                <th>precio actual</th>
+                <th>factura</th>
+                <th>fecha factura</th>
+                <th>observaciones</th>
+                <th>accion</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of equipos" class="text-center">
+                <td>{{x.codigo_equipo}} </td>
+                <td>{{x.disponibilidad}} </td>
+                <td>{{x.tiket}} </td>
+                <td>{{x.marca}} </td>
+                <td>{{x.procesador}} </td>
+                <td>{{x.os}} </td>
+                <td>{{x.ram}} </td>
+                <td>{{x.tipo_disco}} </td>
+                <td>{{x.seriall}} </td>
+                <td>{{x.precio_compra}} </td>
+                <td>{{x.precio_actual}} </td>
+                <td>{{x.numero_factura}} </td>
+                <td>{{x.fecha_factura}} </td>
+                <td>{{x.observaciones}} </td>
+                <td>
+                    <button mat-raised-button color="primary" routerLink="/update/{{x.id}}" ><i class="fa-solid fa-file-pen "></i>Editar</button>
+                    <button mat-raised-button color="warn" class="m-1" (click)="borrarTeam(x)"><i
+                        class="fa-regular fa-trash-can m-1"></i>Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

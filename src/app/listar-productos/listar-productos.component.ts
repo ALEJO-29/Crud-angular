@@ -12,7 +12,6 @@ import { ProductoService } from '../service/producto.service';
 })
 export class ListarProductosComponent implements OnInit {
   productos: Producto[] = [];
-
   constructor(private productoService: ProductoService,
     private titulo: Title, private toastr: ToastrService) {
     titulo.setTitle('inventario')

@@ -1,23 +1,33 @@
-<div class="text-center mt-5">
-    <table class="table table-hover">
-        <thead>
-            <tr class="">
-                <th>ID</th>
-                <th>NOMBRE</th>
-                <th>PRECIO</th>
-                <th>ACCIONES</th>
-            </tr>
-        </thead>
-        <tbody class="text-center">
-            <tr *ngFor="let x of productos">
-                <td>{{x.id}} </td>
-                <td>{{x.nombre}} </td>
-                <td>${{x.precio}} </td>
-                <td>
-                   <button mat-raised-button color="primary" [routerLink]="['/editar/{{x.id}}']"><i class="fa-solid fa-file-pen m-1"></i>Editar</button>
-                   <button mat-raised-button color="warn" class="m-1"  (click)="borrar(x)"><i class="fa-regular fa-trash-can m-1"></i>Eliminar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container mb-4 mt-5 mx-1 w-75">
+    <a class="nav-link btn btn-success w-25 text-white" [routerLink]="['/nuevo']"> 
+        <i class="fa-solid fa-plus m-2"></i>Agregar Producto</a>
+</div>
+<div class="text-center mt-5  ">
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="">
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>PRECIO</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center text-uppercase">
+                    <tr *ngFor="let x of productos">
+                        <td>{{x.id}} </td>
+                        <td>{{x.nombre}} </td>
+                        <td>${{x.precio}} </td>
+                        <td>
+                            <button mat-raised-button color="primary" routerLink="editar/{{x.id}}"><i
+                                    class="fa-solid fa-file-pen m-1"></i>Editar</button>
+                            <button mat-raised-button color="warn" class="m-1" (click)="borrar(x)"><i
+                                    class="fa-regular fa-trash-can m-1"></i>Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
