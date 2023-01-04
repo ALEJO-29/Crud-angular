@@ -22,6 +22,12 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { CreateUserComponent } from './components/user/create-user/create-user.component';
 import { ListUserComponent } from './components/user/list-user/list-user.component';
 import { UpdateUserComponent } from './components/user/update-user/update-user.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ListAssigmentComponent } from './components/list-assigment/list-assigment.component';
+import { UpdateAssigmentComponent } from './components/update-assigment/update-assigment.component';
+import { CreateAssigmentComponent } from './components/create-assigment/create-assigment.component';
+import { BibliotecaComponent } from './components/biblioteca/biblioteca.component';
+import { CrearLibroComponent } from './components/crear-libro/crear-libro.component';
 
 
 @NgModule({
@@ -36,6 +42,11 @@ import { UpdateUserComponent } from './components/user/update-user/update-user.c
     CreateUserComponent,
     ListUserComponent,
     UpdateUserComponent,
+    ListAssigmentComponent,
+    UpdateAssigmentComponent,
+    CreateAssigmentComponent,
+    BibliotecaComponent,
+    CrearLibroComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +60,8 @@ import { UpdateUserComponent } from './components/user/update-user/update-user.c
     MatSidenavModule,
     MatListModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

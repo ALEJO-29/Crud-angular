@@ -1,0 +1,21 @@
+<div class="container mb-5 mt-3 d-flex">
+    <a class="nav-link btn btn-success w-25 text-white" [routerLink]="['/crearLibro']">
+        <i class="fa-solid fa-plus m-2"></i>Agregar Libro</a>
+</div>
+
+<div class="container">
+    <table class="table table-hover container text-center">
+        <thead>
+            <tr>
+                <th>nombre libro</th>
+                <th>biblioteca donde pertenece</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let x of libros">
+            <tr>
+                <td>{{x.nombre}} </td>
+                <td>{{x.biblioteca.nombre}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

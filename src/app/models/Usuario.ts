@@ -1,6 +1,6 @@
 export class Usuario {
-    id: number;
-    documento: number;
-    nombre: string;
-    apellido: string;
+    id?: number;
+    documento?: number;
+    nombre?: string;
+    apellido?: string;
 }

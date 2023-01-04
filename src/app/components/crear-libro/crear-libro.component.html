@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-head">
+                <h3>Agregar un nuevo libro </h3>
+            </div>
+            <div class="card-body">
+                <form action="">
+                    <div class="form-group mb-4">
+                        <label for=""><strong>Nombre</strong></label>
+                        <input type="text" name="nombre" id="nombre" [(ngModel)]="libro.nombre" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="" class="text-uppercase">Biblioteca</label>
+                        <select class="form-select text-uppercase" aria-label="Default select example"
+                            [(ngModel)]="libro.nombre" name="biblioteca" required>
+                            <option *ngFor="let item of books.biblioteca" [ngValue]="libro">{{item.nombre}} </option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

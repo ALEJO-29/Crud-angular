@@ -1,1 +1,28 @@
-<p>list-user works!</p>
+<div class="container mb-5 mt-3 d-flex">
+    <a class="nav-link btn btn-success w-25 text-white" [routerLink]="['/new']">
+        <i class="fa-solid fa-plus m-2"></i>Agregar Producto</a>
+</div>
+<div>
+    <table class="table table-hover container">
+        <thead class="text-center">
+            <tr class="text-uppercase">
+                <th>documento</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of usuarios" class="text-center">
+                <td>{{x.documento}} </td>
+                <td>{{x.nombre}} </td>
+                <td>{{x.apellido}} </td>
+                <td>
+                    <button mat-raised-button color="primary" routerLink="/updateUser/{{x.id}}" ><i class="fa-solid fa-file-pen "></i>Editar</button>
+                    <button mat-raised-button color="warn" class="m-1" (click)="borrarUser(x)"><i
+                        class="fa-regular fa-trash-can m-1"></i>Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

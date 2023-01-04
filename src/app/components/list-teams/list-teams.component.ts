@@ -11,6 +11,7 @@ import { ProductoService } from 'src/app/service/producto.service';
 })
 export class ListTeamsComponent implements OnInit {
   equipos: Equipo[];
+  filterPost:''
   constructor(private productoService: ProductoService,
     private titulo: Title, private toastr: ToastrService) {
     titulo.setTitle('Equipos')

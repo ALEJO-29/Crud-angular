@@ -9,8 +9,15 @@
                         class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link m-2" [routerLink]="['/list']"><i class="fa-solid fa-laptop "></i>Equipos</a>
+                <a class="nav-link m-2 active" [routerLink]="['/list']"><i class="fa-solid fa-laptop "></i>Equipos</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link m-2 active" [routerLink]="['/listUser']"><i class="fa-solid fa-users"></i>Usuarios</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link m-2 active"   [routerLink]="['/listBiblioteca']"
+             routerLinkActive="router-link-active" >Asignaciones</a>
+          </li>
         </ul>
     </div>
 </nav>

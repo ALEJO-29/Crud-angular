@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Usuario } from 'src/app/models/usuario';
+import { Usuario } from 'src/app/models/Usuario';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -28,7 +28,7 @@ export class CreateUserComponent implements OnInit {
       this.toastr.info('Producto Creado', 'OK', {
         timeOut: 3000, positionClass: 'toast-top-center'
       })
-      this.router.navigate(['/list'])
+      this.router.navigate(['/listUser'])
     })
   }
 }

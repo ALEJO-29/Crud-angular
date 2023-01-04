@@ -9,8 +9,8 @@ import { Producto } from '../models/Producto';
 })
 export class ProductoService {
   //urls for conection backend and frontend
-  private url = 'http://localhost:8080/producto';
-  private url_teams = 'http://localhost:8080/equipos';
+  private url = 'http://localhost:8090/producto';
+  private url_teams = 'http://localhost:8090/equipos';
 
   constructor(private http: HttpClient) { }
 

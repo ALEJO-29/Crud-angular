@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
-import { Usuario } from 'src/app/models/usuario';
+import { Usuario } from 'src/app/models/Usuario';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class ListUserComponent implements OnInit{
 
   constructor(private userService: UserService,
     private titulo: Title, private toastr: ToastrService) {
-    titulo.setTitle('usuarios')
+    titulo.setTitle('Usuarios')
   }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class ListUserComponent implements OnInit{
      })
   }
 
-  borrarTeam(usuario:Usuario): void {
+  borrarUser(usuario:Usuario): void {
     this.userService.deleteUser(usuario.id).subscribe(data => {
       this.userService.listUser().subscribe(res => {
         this.usuarios = res;

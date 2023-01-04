@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'curso_angular';
   showFiller = false;
+
+  handleSearch(value:string){
+    console.log(value);
+    
+  }
 }
